@@ -39,7 +39,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder "sites/", "/home/vagrant/sites/", :nfs => false,
       owner: "vagrant",
       group: "www-data",
-      mount_options: ["dmode=775,fmode=664"]
+      mount_options: ["dmode=777,fmode=777"]
 
   config.vm.provision :salt do |salt|
 
